@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "472f37bb-8044-45b0-a88b-040e29164eeb": {
+      "ProjectGuid": "472f37bb-8044-45b0-a88b-040e29164eeb",
+      "DisplayName": "QuotesAPI",
+      "ColorIndex": 0
+    },
+    "dff67257-61ce-4e48-a041-6ae664af7e98": {
+      "ProjectGuid": "dff67257-61ce-4e48-a041-6ae664af7e98",
+      "DisplayName": "QuotesTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
