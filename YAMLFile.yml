@@ -1,0 +1,33 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quotesapidepl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: QuotesAPI
+  template:
+    metadata:
+      labels:
+        app: QuotesAPI
+    spec:
+      containers:
+      - name: quotesapi
+        image: quotesctr.azurecr.io/quotesrepos:latestquote
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: dsconfigsn1
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quotesapi
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: QuotesAPI
